@@ -1,0 +1,21 @@
+<service>
+  <!-- Service ID displayed in the system program -->
+  <id>Aria2</id>
+  <!-- Service name -->
+  <name>Aria2 Backend Execution</name>
+  <!-- Here is the description of the service to run, feel free to write it -->
+  <description>Aria2 Backend Execution service starts at boot</description>.
+
+  <!-- The content of the command to be executed -->
+  <executable>D:\Program_Files\AlistHelper2\aria2c.exe</executable>
+  <arguments>--conf-path=D:\Program_Files\AlistHelper2\aria2.conf</arguments>
+  <!--
+       You can define a set of actions that should be performed if hosting the executable fails:
+       restart Restart the service
+       reboot System reboot
+       none None
+  -->
+  <onfailure action="restart" delay="60 sec"/>
+  <onfailure action="restart" delay="120 sec"/>
+  <logmode>reset</logmode>
+</service>
